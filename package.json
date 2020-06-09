@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "connect": "^3.6.6",
+    "custom-select": "^1.1.15",
     "gulp": "^4.0.2",
     "gulp-copy": "^4.0.1",
     "gulp-js-minify": "0.0.3",
@@ -19,7 +20,8 @@
     "gulp-sass": "^4.0.1",
     "gulp-uglifycss": "^1.1.0",
     "normalize.css": "^8.0.0",
-    "run-sequence": "^2.2.1"
+    "run-sequence": "^2.2.1",
+    "styleselect": "^1.0.3"
   },
   "devDependencies": {
     "browser-sync": "^2.26.7",

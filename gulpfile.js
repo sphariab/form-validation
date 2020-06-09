@@ -57,6 +57,6 @@ gulp.task('watch', function() {
 
 gulp.task('default', gulp.parallel('watch', 'browser-sync'));
 
-gulp.task('build', gulp.series('clean', 'copy', 'pug', 'sass', 'minify-js'));
+gulp.task('build', gulp.series('copy', 'pug', 'sass', 'minify-js'));
 
 

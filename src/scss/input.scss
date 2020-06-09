@@ -1,0 +1,45 @@
+@import 'mixin.scss';
+.row{
+	&__input {
+		width: 100%;
+		border: 1px solid #CCCCCC;
+		box-shadow: inset 1px 1px 2px 0 rgba(0,0,0,0.20);
+		border-radius: 3px;
+		padding-left: 10px;
+		height: 32px;
+		box-sizing: border-box;
+		@include placeholder {
+			color: #888888;
+			font-weight: 400;
+			font-size: 14px;
+			font-weight: 400;
+		}
+		&_name {
+			width: calc(100%/2 - 5px);
+			&:last-child{
+				margin-right: 0;
+			}
+		}
+		&_card-number{
+		}
+		&_zip{
+		}
+		&_cvv{
+			width: 106px;
+			position: relative;
+			-webkit-appearance: none;
+		}
+		&-wrapper {
+			display: flex;
+			align-items: center;
+			&_name {
+				justify-content: space-between;
+			}
+		}
+	}
+	&__label {
+		margin-bottom: 6px;
+		display: block;
+		font-weight: bold;
+	}
+}

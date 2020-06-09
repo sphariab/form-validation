@@ -1,0 +1,19 @@
+@mixin placeholder {
+	&::-webkit-input-placeholder {@content}
+	&:-moz-placeholder           {@content}
+	&::-moz-placeholder          {@content}
+	&:-ms-input-placeholder      {@content}
+}
+
+@mixin select {
+	color: #888;
+	font-size: 14px;
+	font-weight: 400;
+	border: 1px solid #CCCCCC;
+	box-shadow: inset 1px 1px 2px 0 rgba(0,0,0,0.20);
+	border-radius: 3px;
+	position: relative;
+	padding-left: 8px;
+	box-sizing:border-box;
+	line-height: 32px;
+}

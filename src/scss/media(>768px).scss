@@ -1,0 +1,15 @@
+@media only screen and (min-width: 768px) {
+	.row {
+		display: flex;
+		align-items: center;
+	}
+	.user-form{
+		margin-right: 30px;
+	}
+	.title {
+		letter-spacing: 0;
+	}
+	.row.paypal-block-desktop{
+		display: none;
+	}
+}
