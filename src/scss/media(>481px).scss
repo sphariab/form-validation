@@ -1,10 +1,8 @@
 @media only screen and (min-width: 481px) {
 	.title {
 		font-size: 24px;
-		font-weight: 400;
-		margin: 41px 0 20px 0;
+		margin: 41px 15px 30px 15px;
 	}
-
 	.control{
 		display: flex;
 		align-items: center;
@@ -22,19 +20,11 @@
 		display: flex;
 		align-items: center;
 		&__label {
-			font-weight:bold;
-			font-size: 14px;
-			margin-right: 15px;
 			min-width: 115px;
+			text-align: right;
 		}
 		&__input{
-			border: 1px solid #CCCCCC;
-			height: 32px;
 			width: 162px;
-			box-shadow: inset 1px 1px 2px 0 rgba(0,0,0,0.20);
-			border-radius: 3px;
-			padding-left: 10px;
-			box-sizing: border-box;
 			&_name {
 				width: 162px;
 				margin-right: 15px;
@@ -58,7 +48,6 @@
 			}
 		}
 	}
-	
 	.icons-mobile {
 		display: none;
 	}
@@ -67,14 +56,11 @@
 		display: flex;
 		justify-content: space-between;
 	}
-	.wrapper {
-		max-width: 840px;
-		margin: 0 auto;
-		display: flex;
-		justify-content: center;
-	}
 	.paypal-block {
 		width: 339px;
+		&__text {
+			font-size: 16px;
+		}
 	}
 	.submit-button{
 		width:339px;

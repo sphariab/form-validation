@@ -3,8 +3,7 @@ html(lang='en')
     head
         meta(name="viewport" content="width=device-width, initial-scale=1")
         link(rel="stylesheet" href="http://yui.yahooapis.com/3.18.1/build/cssnormalize/cssnormalize-min.css")
-        link(href="https://cdnjs.cloudflare.com/ajax/libs/html5tooltipsjs/1.7.3/html5tooltips.min.css")
-        link(rel="stylesheet" href="css/main.css")
+        link(rel="stylesheet" href="css/style.min.css")
     body
         h1.title Thank you for choosing to subscribe to PDFfiller services!
         section.wrapper
@@ -65,13 +64,20 @@ html(lang='en')
                     .control
                         label.row__label CVV/CVC
                         input.row__input.row__input_cvv(type="number" max="999" pattern="([0-9]|[0-9]|[0-9])" name="cvv" placeholder="XXXX")
-                        #tooltip.tooltip-btn(data-tooltip-color="white" data-tooltip="<div class='tooltip__wrapper' > " +
-                         "<div class='tooltip__card'><img class='tooltip__img' src='../images/visa-card-img.png'/><p class='tooltip__text_bold'>Visa, MasterCard</p><p class='tooltip__text'>3-Digit Verification Number</p></div>" +
-                         "<div class='tooltip__divider'></div>" +
-                         "<div class='tooltip__card'><img class='tooltip__img' src='../images/express-card-img.png'/><p class='tooltip__text_bold'>American Express</p><p class='tooltip__text'>4-Digit Verification Number</p></div>" +
-                         "</div>" )
+                        .tooltip
                             include ../images/question-icon.svg
-                .row
+                            .tooltip__wrapper
+                                .tooltip__card
+                                    img.tooltip__img(src='../images/visa-card-img.png')
+                                    p.tooltip__text_bold Visa, MasterCard
+                                    p.tooltip__text 3-Digit Verification Number
+                                .tooltip__divider
+                                .tooltip__card
+                                    img.tooltip__img(src='../images/express-card-img.png')
+                                    p.tooltip__text_bold American Express
+                                    p.tooltip__text 4-Digit Verification Number
+
+                .row.row_zip-code
                     label.row__label Zip/Postal Code
                     .row__input-wrapper
                         input.row__input.row__input_zip(type="number" name="zipcode" placeholder="01001")
@@ -87,7 +93,4 @@ html(lang='en')
                     p.paypal-block__text Or pay with Paypal
                     button.paypal-block__button
                         include ../images/paypal.svg
-
-    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js")
-    script(src="https://cdnjs.cloudflare.com/ajax/libs/html5tooltipsjs/1.7.3/html5tooltips.min.js")
     script(src="js/main.min.js")

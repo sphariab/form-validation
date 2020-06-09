@@ -1,13 +1,13 @@
-@media (min-width: 1024px) {
+@media only screen and (min-width: 1024px) {
 	.wrapper {
 		flex-direction: row;
 		justify-content: center;
-	}
-	.row_paypal-block-mobile{
-		display: none;
-	}
-	.row.row_paypal-block-desktop{
-		display: block;
+		.row.row_paypal-block-mobile{
+			display: none;
+		}
+		.row.row_paypal-block-desktop{
+			display: block;
+		}
 	}
 	.row_submit-button{
 		justify-content: flex-end;
@@ -21,6 +21,12 @@
 		padding: 48px 0 0 0;
 		&__text{
 			margin-bottom: 30px;
+			font-size: 18px;
+			line-height: 21px;
+		}
+		&__button {
+			width: 137px;
+			height: 52px;
 		}
 	}
 }

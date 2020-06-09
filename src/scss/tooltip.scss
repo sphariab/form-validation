@@ -1,53 +1,82 @@
 .html5tooltip-box {
-	background-color: #fff;
-	border-radius: 2px;
-	border: 1px solid #CCCCCC;
-	box-shadow: 0 2px 4px 0 rgba(0,0,0,0.20);
-	color: #000;
-	font-family: arial,sans-serif;
-	font-size: 11px;
-	font-weight: bold;
-	display: flex;
-	flex-direction: column;
-	position: relative;
-	top:20px;
+
+}
+
+
+.tooltip .tooltip__wrapper::after {
+	content: "";
+	position: absolute;
+	top: 100%;
+	right:20px;
+	margin-left: -5px;
+	border-style: solid;
+	box-sizing: border-box;
+	border: 1em solid #ccc;
+	border-color: transparent transparent #fff #fff;
+	transform-origin: 0 0;
+	transform: rotate(-45deg);
+	box-shadow: -3px 3px 3px 0 rgba(0,0,0,0.20);
 }
 
 .tooltip {
-	&__wrapper{
+	cursor: pointer;
+	position: absolute;
+	right: 10px;
+	bottom: 6px;
+	&__wrapper {
+		right: -21px;
+		bottom: 34px;
+		visibility: hidden;
+		opacity: 0;
+		transition: opacity 0.3s;
 		display: flex;
-		flex-direction: row;
 		justify-content: space-between;
 		width: 287px;
-		height: 182px;
+		height: 172px;
 		padding: 20px;
 		box-sizing: border-box;
+		border: 1px solid #CCCCCC;
+		box-shadow: 0 2px 4px 0 rgba(0,0,0,0.20);
+		background-color: #fff;
+		border-radius: 2px;
+		color: #000;
+		font-family: arial,sans-serif;
+		font-size: 11px;
+		font-weight: bold;
+		flex-direction: row;
+		position: absolute;
 	}
-	&__card{
+	&__card {
 		display: flex;
 		flex-direction: column;
+		line-height: 16px;
 	}
 	&__img {
 		width: 108px;
 		height: 67px;
 		margin-bottom: 17px;
 	}
-	&__text{
+	&__text {
 		font-size: 12px;
 		color: #444444;
 		text-align: left;
 		font-weight: 400;
 		margin: 0;
-		&_bold{
+		&_bold {
 			font-weight: bold;
 			margin: 0;
 		}
 	}
-	&__divider{
+	&__divider {
 		margin: 0 15px;
 		background: #DDDDDD;
 		width: 1px;
 		height: 100%;
 		display: block;
 	}
+}
+
+.tooltip_active .tooltip__wrapper {
+	visibility: visible;
+	opacity: 1;
 }
