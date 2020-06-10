@@ -1,5 +1,10 @@
 # form-validation
 
+for installation:
+- npm install
+- gulp build
+- gulp (to run on http://localhost:3000)
+
 This is responsive form
 
 Used:
