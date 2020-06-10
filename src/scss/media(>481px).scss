@@ -27,7 +27,9 @@
 			width: 162px;
 			&_name {
 				width: 162px;
-				margin-right: 15px;
+				&:first-child{
+					margin-right: 15px;
+				}
 			}
 			&_card-number {
 				margin-right: 15px;
@@ -71,5 +73,12 @@
 	}
 	.row.row_paypal-block-desktop{
 		display: none;
+	}
+	.validation-wrapper{
+		&:last-child {
+			.row__input_name {
+				margin-right: 0;
+			}
+		}
 	}
 }

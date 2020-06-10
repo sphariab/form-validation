@@ -9,6 +9,11 @@
 		border-radius: 3px;
 		padding-left: 10px;
 		box-sizing: border-box;
+		@include spinbutton {
+			-webkit-appearance: none;
+			margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+			-moz-appearance:textfield; /* Firefox */
+		}
 		@include placeholder {
 			color: #888888;
 			font-weight: 400;
@@ -17,14 +22,10 @@
 			line-height: 16px;
 		}
 		&_name {
-			width: calc(100%/2 - 5px);
+			width: 100%;
 			&:last-child{
 				margin-right: 0;
 			}
-		}
-		&_card-number{
-		}
-		&_zip{
 		}
 		&_cvv{
 			width: 106px;
@@ -36,6 +37,9 @@
 			align-items: center;
 			&_name {
 				justify-content: space-between;
+				.validation-wrapper{
+					width: calc(100%/2 - 5px);
+				}
 			}
 		}
 	}

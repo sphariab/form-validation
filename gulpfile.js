@@ -1,8 +1,7 @@
 var gulp = require('gulp');
 var browserSync = require('browser-sync');
 var sass = require('gulp-sass');
-var clean = require('gulp-clean');
-var minifyjs = require('gulp-js-minify');
+var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
 var rename = require('gulp-rename');
 var pug = require('gulp-pug');
@@ -11,20 +10,15 @@ var minifycss = require('gulp-minify-css');
 var copy = require('gulp-copy');
 
 gulp.task('copy', function() {
-	return gulp.src('./src/images/*')
+	 gulp.src('./src/images/*')
 		.pipe(gulp.dest('./dist/images'));
 });
 
 gulp.task('minify-js', function(){
   gulp.src('./src/js/main.js')
-    .pipe(minifyjs())
+    .pipe(uglify())
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('./dist/js'));
-});
-
-gulp.task('clean', function () {
-	return gulp.src('dist', {read: false})
-		.pipe(clean());
 });
 
 gulp.task('browser-sync', function() {
@@ -58,7 +52,6 @@ gulp.task('watch', function() {
 });
 
 gulp.task('default', gulp.parallel('watch', 'browser-sync'));
-
-gulp.task('build', gulp.series('copy', 'pug', 'sass', 'minify-js'));
+gulp.task('build', gulp.parallel('copy', 'pug', 'sass', 'minify-js'));
 
 

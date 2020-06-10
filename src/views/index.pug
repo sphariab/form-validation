@@ -7,7 +7,7 @@ html(lang='en')
     body
         h1.title Thank you for choosing to subscribe to PDFfiller services!
         section.wrapper
-            form.user-form
+            form.user-form(action="/send" method="post" novalidate)
                 .icons-mobile
                     include ../images/visa-icon.svg
                     include ../images/express-icon.svg
@@ -16,54 +16,64 @@ html(lang='en')
                 .row
                     label.row__label Cardholder Name
                     .row__input-wrapper.row__input-wrapper_name
-                        input.row__input.row__input_name(type="text" name="firstname" placeholder="First Name")
-                        input.row__input.row__input_name(type="text" name="lastname" placeholder="Last Name")
+                        span.validation-wrapper
+                            input.row__input.row__input_name(type="text" name="firstname" required placeholder="First Name" )
+                            .messages
+                        span.validation-wrapper
+                            input.row__input.row__input_name(type="text" name="lastname" required placeholder="Last Name")
+                            .messages
                 .row
                     label.row__label Card Number
-                    .row__input-wrapper
-                        input.row__input.row__input_card-number(type="number" inputmode="numeric" pattern="[0-9]*" name="cardnumber" maxlength="19" placeholder="⦁⦁⦁⦁⦁ ⦁⦁⦁⦁⦁ ⦁⦁⦁⦁⦁ ⦁⦁⦁⦁⦁")
+                    .row__input-wrapper.validation-wrapper
+                        input.row__input.row__input_card-number(type="number" required inputmode="numeric" name="cardnumber" maxlength="19" placeholder="⦁⦁⦁⦁⦁ ⦁⦁⦁⦁⦁ ⦁⦁⦁⦁⦁ ⦁⦁⦁⦁⦁")
                         .icons-desktop
                             include ../images/visa-icon.svg
                             include ../images/express-icon.svg
                             include ../images/discover-icon.svg
                             include ../images/mastercard-icon.svg
+                        .messages
+                    .messages
                 .row.row_date
                     .control
                         label.row__label Exp. Date
                         .row__input-wrapper
-                            select.row__select_mm
-                                option(selected) MM
-                                option 01
-                                option 02
-                                option 03
-                                option 04
-                                option 05
-                                option 06
-                                option 07
-                                option 08
-                                option 09
-                                option 10
-                                option 11
-                                option 12
+                            .validation-wrapper
+                                select.row__select_mm(name="expDateMonth")
+                                    option(selected value="") MM
+                                    option(value="01") 01
+                                    option(value="02") 02
+                                    option(value="03") 03
+                                    option(value="04") 04
+                                    option(value="05") 05
+                                    option(value="06") 06
+                                    option(value="07") 07
+                                    option(value="08") 08
+                                    option(value="09") 09
+                                    option(value="10") 10
+                                    option(value="11") 11
+                                    option(value="12") 12
+                                .messages
                             span.divider /
-                            select.row__select_yy
-                                option(selected) YYYY
-                                option 2018
-                                option 2019
-                                option 2020
-                                option 2021
-                                option 2022
-                                option 2023
-                                option 2024
-                                option 2025
-                                option 2026
-                                option 2027
-                                option 2028
-                                option 2029
-                                option 2030
-                    .control
+                            .validation-wrapper
+                                select.row__select_yy(name="expDateYear")
+                                    option(selected value="") YYYY
+                                    option(value="2018") 2018
+                                    option(value="2019") 2019
+                                    option(value="2020") 2020
+                                    option(value="2021") 2021
+                                    option(value="2022") 2022
+                                    option(value="2023") 2023
+                                    option(value="2024") 2024
+                                    option(value="2025") 2025
+                                    option(value="2026") 2026
+                                    option(value="2027") 2027
+                                    option(value="2028") 2028
+                                    option(value="2029") 2029
+                                    option(value="2030") 2030
+                                .messages
+                    .control.validation-wrapper
                         label.row__label CVV/CVC
-                        input.row__input.row__input_cvv(type="number" max="999" pattern="([0-9]|[0-9]|[0-9])" name="cvv" placeholder="XXXX")
+                        input.row__input.row__input_cvv(type="number" required name="cvv" placeholder="XXXX")
                         .tooltip
                             include ../images/question-icon.svg
                             .tooltip__wrapper
@@ -76,21 +86,25 @@ html(lang='en')
                                     img.tooltip__img(src='../images/express-card-img.png')
                                     p.tooltip__text_bold American Express
                                     p.tooltip__text 4-Digit Verification Number
-
+                        .messages
                 .row.row_zip-code
                     label.row__label Zip/Postal Code
-                    .row__input-wrapper
-                        input.row__input.row__input_zip(type="number" name="zipcode" placeholder="01001")
+                    .row__input-wrapper.validation-wrapper
+                        input.row__input.row__input_zip(type="number" required name="zipcode" placeholder="01001")
+                        .messages
                 .row.row_paypal-block.row_paypal-block-mobile
                     .paypal-block
                         p.paypal-block__text Or pay with Paypal
                         button.paypal-block__button
-                                    include ../images/paypal.svg
+                            include ../images/paypal.svg
                 .row.row_submit-button
-                    button.submit-button(type="submit") Start My Subscription for $19.99/mo.
+                    button.submit-button(type="submit" ) Start My Subscription for $19.99/mo.
             aside.row.row_paypal-block-desktop
                 .paypal-block
                     p.paypal-block__text Or pay with Paypal
-                    button.paypal-block__button
+                    button.paypal-block__button(type="submit")
                         include ../images/paypal.svg
+    script(src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js")
+    script(src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.10.2/underscore-min.js")
     script(src="js/main.min.js")

@@ -5,6 +5,11 @@
 	&:-ms-input-placeholder      {@content}
 }
 
+@mixin spinbutton {
+	&::-webkit-outer-spin-button {@content}
+	&::-webkit-inner-spin-button {@content}
+}
+
 @mixin select {
 	color: #888;
 	font-size: 14px;

@@ -87,18 +87,6 @@ body{
 	}
 }
 
-.tooltip-btn{
-	content: ' ';
-	display: block;
-	width: 12px;
-	height: 12px;
-	background: url(../images/visa-icon.svg)  0 0 no-repeat;
-	position: absolute;
-	bottom: 11px;
-	right: 10px;
-	cursor: pointer;
-}
-
 .submit-button {
 	height: 42px;
 	width: 100%;
@@ -142,6 +130,27 @@ body{
 }
 .row_paypal-block-desktop{
 	display: none;
+}
+
+.validation-wrapper{
+	position: relative;
+}
+
+.messages {
+	position: absolute;
+	bottom: -10px;
+	font-size: 12px;
+	color: #EF5350;
+	height: 10px;
+	p {
+		margin: 0;
+	}
+}
+
+.has-error .row__input {
+	border: 1px solid #EF5350;
+	box-shadow: inset 1px 1px 2px 0 rgba(0,0,0,0.20);
+	border-radius: 3px;
 }
 
 @import 'media(>481px)';
