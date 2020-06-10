@@ -1,9 +1,158 @@
-p {
-	color: green;
+// 480/768/1024px
+
+@import 'input.scss';
+@import 'select.scss';
+@import 'tooltip.scss';
+
+body{
+	color: #444444;
+	font-family: Arial;
 }
-div {
-	color:red;
+
+.title {
+	font-size: 20px;
+	color: #343434;
+	letter-spacing: 0;
+	text-align: center;
+	line-height: 26px;
+	font-weight: 400;
+	margin: 30px 0 20px 0;
 }
-p {
-	color: yellow;
+
+.paypal-block {
+	width: 100%;
+	height: 68px;
+	flex-direction: row;
+	padding: 12px 16px;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: #F7F7F7;
+	border: 1px solid #DDDDDD;
+	border-radius: 3px;
+	&__text {
+		color: #444444;
+		font-size: 14px;
+		margin: 0;
+	}
+	&__button{
+		padding: 0;
+		width: 100px;
+		height: 38px;
+		border: 0;
+		cursor: pointer;
+		svg {
+			height: 100%;
+			width: 100%;
+		}
+	}
 }
+
+.wrapper {
+	max-width: 840px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	padding: 0 15px 30px 15px;
+}
+
+.row {
+	margin-bottom: 12px;
+	flex-direction: column;
+	align-items: flex-start;
+	&:last-child {
+		margin-bottom: 20px;
+	}
+	&_date {
+		flex-direction: row;
+	}
+	&_zip-code{
+		margin-bottom: 20px;
+	}
+	&_paypal-block{
+		margin-bottom: 20px;
+	}
+	&_submit-button.row {
+		margin-bottom: 0;
+	}
+}
+
+.control {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	&:first-child{
+		margin-right: 20px;
+	}
+}
+
+.submit-button {
+	height: 42px;
+	width: 100%;
+	font-weight: bold;
+	border: 1px solid #FD7722;
+	border-radius: 3px;
+	font-size: 14px;
+	color: #FFFFFF;
+	padding: 0;
+	background: #FF9000;
+	background-image: linear-gradient(180deg, #FFA006 0%, #FD7722 100%);
+	cursor: pointer;
+}
+
+.icons-mobile {
+	display: flex;
+	justify-content: space-evenly;
+	margin-bottom: 20px;
+	svg {
+		width: 40px;
+		height: 30px;
+	}
+}
+
+.icons-desktop {
+	display: none;
+}
+
+.row_date {
+	display: flex;
+	flex-direction: row;
+}
+
+.divider {
+	color: #444;
+	margin: 0 9px 0 7px;
+}
+
+.row-paypal-block-mobile{
+	display: flex;
+}
+.row_paypal-block-desktop{
+	display: none;
+}
+
+.validation-wrapper{
+	position: relative;
+}
+
+.messages {
+	position: absolute;
+	bottom: -10px;
+	font-size: 12px;
+	color: #EF5350;
+	height: 10px;
+	p {
+		margin: 0;
+	}
+}
+
+.has-error .row__input {
+	border: 1px solid #EF5350;
+	box-shadow: inset 1px 1px 2px 0 rgba(0,0,0,0.20);
+	border-radius: 3px;
+}
+
+@import 'media(>481px)';
+@import 'media(>768px)';
+@import 'media(>1024px)';

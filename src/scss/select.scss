@@ -1,0 +1,16 @@
+@import 'mixin';
+
+.row {
+	&__select {
+		&_mm {
+			height: 32px;
+			width: 64px;
+			@include select
+		}
+		&_yy {
+			height: 32px;
+			width: 79px;
+			@include select
+		}
+	}
+}
