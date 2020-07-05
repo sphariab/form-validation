@@ -1,0 +1,36 @@
+<svg width="108px" height="67px" viewBox="0 0 108 67">
+    <defs>
+        <path d="M283.994913,0 C285.654577,0 287,1.33460105 287,3.00355406 L287,168.996446 C287,170.655263 285.656552,172 283.994913,172 L276.045,172 L266.5,182 L256.955,172 L3.00508723,172 C1.34542338,172 0,170.665399 0,168.996446 L0,3.00355406 C0,1.34473696 1.34344821,0 3.00508723,0 L283.994913,0 Z" id="path-1"></path>
+        <filter x="-2.4%" y="-2.7%" width="104.9%" height="107.7%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.2 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Additional-stuff" transform="translate(-237.000000, -104.000000)">
+            <g id="Group" transform="translate(78.000000, 84.000000)">
+                <g id="Rectangle-53">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <path stroke="#CCCCCC" stroke-width="1" d="M283.994913,0.5 L3.00508723,0.5 C2.31269046,0.5 1.68650505,0.779982628 1.23337709,1.2328794 C0.780062178,1.68596304 0.5,2.31202979 0.5,3.00355406 L0.5,168.996446 C0.5,169.690865 0.779047606,170.316086 1.23114973,170.767958 C1.68477266,171.221349 2.31219031,171.5 3.00508723,171.5 L257.168957,171.5 L266.5,181.275844 L275.831043,171.5 L283.994913,171.5 C284.68731,171.5 285.313495,171.220017 285.766623,170.767121 C286.219938,170.314037 286.5,169.68797 286.5,168.996446 L286.5,3.00355406 C286.5,2.30913469 286.220952,1.68391366 285.76885,1.23204219 C285.315227,0.778650692 284.68781,0.5 283.994913,0.5 Z" stroke-linejoin="square" fill="#FFFFFF" fill-rule="evenodd"></path>
+                </g>
+                <g transform="translate(159.000000, 20.000000)">
+                    <rect id="Rectangle-796-Copy" fill="#3BB89A" x="0" y="0" width="108" height="67" rx="3"></rect>
+                    <text id="American-Express" font-family="Arial-BoldMT, Arial" font-size="8" font-weight="bold" letter-spacing="0.400000006" fill="#FFFFFF">
+                        <tspan x="9" y="15">AMERICAN EXPRES</tspan>
+                        <tspan x="92.7890626" y="15">S</tspan>
+                    </text>
+                    <text id="1234-123456-100000" font-family="Arial-BoldMT, Arial" font-size="9" font-weight="bold" letter-spacing="0.5" fill="#000000">
+                        <tspan x="7" y="55">1234 123456 10000</tspan>
+                        <tspan x="95.581543" y="55">0</tspan>
+                    </text>
+                    <text id="1234" font-family="Arial-BoldMT, Arial" font-size="9" font-weight="bold" fill="#000000">
+                        <tspan x="78" y="36">1234</tspan>
+                    </text>
+                    <ellipse id="Oval-76-Copy" stroke="#F94C45" stroke-width="2" cx="88.5" cy="33" rx="15.5" ry="8"></ellipse>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
