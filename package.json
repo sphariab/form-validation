@@ -10,9 +10,11 @@
   "license": "ISC",
   "dependencies": {
     "connect": "^3.6.6",
+    "gift": "^0.10.2",
     "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
     "gulp-copy": "^4.0.1",
+    "gulp-gh-pages": "git+ssh://git@github.com/tekd/gulp-gh-pages.git#update-dependency",
     "gulp-minify-css": "^1.2.4",
     "gulp-pug": "^4.0.1",
     "gulp-rename": "^1.4.0",
@@ -21,6 +23,10 @@
   },
   "devDependencies": {
     "browser-sync": "^2.26.7",
+    "gh-pages": "git+ssh://git@github.com/tekd/gulp-gh-pages.git#update-dependency",
     "gulp-autoprefixer": "^7.0.1"
+  },
+  "resolutions": {
+    "gift": "^0.10.2"
   }
 }

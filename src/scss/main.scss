@@ -153,6 +153,6 @@ body{
 	border-radius: 3px;
 }
 
-@import 'media(>481px)';
-@import 'media(>768px)';
-@import 'media(>1024px)';
+@import 'mobile-media';
+@import 'media-tablet';
+@import 'media-desktop';
