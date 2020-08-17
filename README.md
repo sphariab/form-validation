@@ -1,5 +1,7 @@
 # form-validation
 
+LIVE DEMO: https://sphariab.github.io/form-validation/
+
 for installation:
 - npm install
 - gulp build
