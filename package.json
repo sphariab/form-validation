@@ -22,7 +22,7 @@
     "gulp-uglify": "^3.0.2"
   },
   "devDependencies": {
-    "browser-sync": "^2.26.7",
+    "browser-sync": "^2.27.10",
     "gh-pages": "git+ssh://git@github.com/tekd/gulp-gh-pages.git#update-dependency",
     "gulp-autoprefixer": "^7.0.1"
   },
